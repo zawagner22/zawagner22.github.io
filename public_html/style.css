@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap');
+
+.talk-section {
+    width: 100%;
+    padding: 1em;
+}
+
+.talk {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    padding: 1em;
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.talk:nth-child(odd) {
+    background-color: #f4f4f4; /* Light gray background for odd-numbered talks */
+}
+
+.talk-image {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    margin-right: 1em;
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.talk-info {
+    flex-grow: 1;
+}
+
+.talk-info h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.talk-info p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.talk-info a {
+    color: #009688; /* Use your link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.talk-info a:hover {
+    text-decoration: underline;
+}
+
+
+#content-root {
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media (max-width: 768px) { /* Adjusts the layout for screens smaller than 768px wide */
+    .columns {
+        flex-direction: column; /* Stack the columns vertically on smaller screens */
+    }
+
+    .column {
+        flex: none; /* Do not allow the column to grow or shrink */
+        max-width: none; /* Resets any max-width */
+        width: 100%; /* Full width */
+    }
+
+    .title-picture {
+        max-width: 100%; /* Allows the image to be full width of the column */
+    }
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Aligns children with the end of the container */
+    padding: 0 1em 0 1em; /* Removed bottom padding */
+}
+
+.column {
+    flex: 1;
+    padding: 0 1em 0 1em; /* Removed bottom padding */
+}
+
+.section-separator {
+    height: 14px; /* Thickness of the line */
+    background-color: #e5e5e5; /* Gray color */
+    width: 100%; /* Full width */
+	margin-top: -4px;
+    /* Removed margin */
+}
+
+/* Assuming .column:first-child is your image container */
+.title-picture {
+    max-width: 100%;
+    height: auto;
+    width: auto; /* allows the image to scale down */
+}
+
+.column:first-child {
+    flex: 1 1 auto; /* allows the column to shrink with the flex container */
+    max-width: 500px; /* maximum width of the image container */
+}
+
+
+/* Assuming .column:last-child is your text container */
+.column:last-child {
+    flex: 1 1 auto; /* Allow to grow, allow shrink, and base width on content */
+	max-width: 500px;
+}
+
+
+
+h1 {text-align: center;}
+
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+p, li {
+    font-family: 'Inter', serif;
+    font-size: 1em;
+}
+
+body, h1, h2, h3, h4, h5 {
+    font-family: 'Inria Sans', sans-serif;
+}
+
+.title-picture {
+    margin-top: 1em;
+}
+
+.paper-venue {
+    color: #bbbbbb;
+}
+
+
+td {
+    padding: 0.5em;
+}
+
+
+.author {
+    font-size: 0.85em;
+    font-weight: 80;
+}
+
+.paper-title {
+    font-size: 1.15em;
+}
+
+.email-icon:hover .fas {
+    color: #555; /* Darker color on hover */
+}
+
+.email-icon:active .fas {
+    color: #777; /* Even darker color when clicked */
+}
